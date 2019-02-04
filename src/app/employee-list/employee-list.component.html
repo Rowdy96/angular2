@@ -1,0 +1,58 @@
+
+
+    <p></p>
+    <div class="card">
+      <div class="card-header">Employee-List</div>
+
+      <div class="card-body">
+          <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Employee-Name</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let emp of Employee">
+                    <td>
+                     {{emp.FirstName}} {{emp.LastName}}
+                    </td>
+                    <td>
+                        {{emp.Contact}}
+                    </td>
+                    <td>
+                        {{emp.Email}}
+                    </td>
+                    <td>
+                        {{emp.Address}}
+                       </td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" [routerLink]="['/edit']">
+                          Edit
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary btn-sm">
+                          Delete
+                        </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+          </div> 
+      </div> 
+
+      <div class="card-footer">
+          <button class="btn btn-success btn-sm" [routerLink]="['/add']">
+              Add Employee
+            </button>
+      </div>
+    </div>
+
+
+

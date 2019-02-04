@@ -1,0 +1,53 @@
+<div class="card">
+  <div class="card-header">Employee-Details</div>
+
+  <div class="card-body">
+      <div class="table-responsive">
+          <table class="table mb-0">
+            <thead>
+              <tr>
+                <th>Employee-Name</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let emp of Employee">
+                
+                <td>
+                    <input type="text" class="form-control" id="fname" [(ngModel)]="emp.FirstName" >
+                    <input type="text" class="form-control" id="fname" [(ngModel)]="emp.LastName" >
+                  
+                </td>
+                
+                <td>
+                    <input type="text" class="form-control" id="fname" [(ngModel)]="emp.Contact">
+                </td>
+                <td>
+                    <input type="text" class="form-control" id="fname" [(ngModel)]="emp.Email" >
+                </td>
+                <td>
+                    <input type="text" class="form-control" id="fname" [(ngModel)]="emp.Address">
+                </td>
+                <td>
+                    <button class="btn btn-primary btn-sm" [routerLink]="['/list']">
+                      save
+                    </button>
+                </td>
+              </tr>
+
+              <tr>
+                  <td>
+                      <button class="btn btn-primary btn-sm" [routerLink]="['/list']">
+                        back
+                      </button>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+      </div> 
+  </div> 
+
+
+</div>

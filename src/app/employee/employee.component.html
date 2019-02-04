@@ -1,0 +1,71 @@
+<p></p>
+<Form >
+   
+        <div class="form-group">
+            <label for="fname">First Name:</label>
+            <input type="text" class="form-control" id="fname" [(ngModel)]="model.FirstName" name="FirstName">
+        </div>
+
+        <div class="form-group">
+            <label for="lname">Last Name:</label>
+            <input type="text" class="form-control" id="lname" [(ngModel)]="model.LastName" name="LastName">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Id:</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="model.Email" name="Email">
+        </div>
+
+        <div class="form-group">
+            <label for="contact">Contact:</label>
+            <input id="contact" type="tel" name="Phone" class="form-control" [(ngModel)]="model.Contact" name="Contact"/>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="Address" class="form-control" [(ngModel)]="model.Address" name="Address"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="Uname">Username:</label>
+            <input type="text" id="Uname" name="UserName" class="form-control" [(ngModel)]="model.UserName" name="UserName"/>
+        </div>
+
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="Password" class="form-control" [(ngModel)]="model.Password" name="" />
+        </div>
+
+        <div class="form-group">
+			<label>Gender:     </label>
+			<input type="radio" id="male" name="Gender" value="male" [(ngModel)]="model.Gender"/> <label for="male"> Male</label>
+			<input type="radio" id="female" name="Gender" value="female" [(ngModel)]="model.Gender"/><label for="female"> Female</label>
+		</div>
+		
+
+        <div class="form-group">
+            <label for="ql">Qualification</label>
+            <select class="form-control" name="Qualification" [(ngModel)]="model.Qualification" name="Qualification">
+                <option *ngFor="let ql of Qualifications" [value]="ql">{{ql}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="ql">Experience</label>
+            <select class="form-control" name="Experience" [(ngModel)]="model.Experience" name="Experience">
+                <option *ngFor="let exp of Experiences" [value]="exp">{{exp}} </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="ql">Coding Languages:</label>
+            <div *ngFor="let Ln of Languages" >
+                <input type="checkbox"  name="Languages" [value]="Ln"  >{{Ln}}
+            </div>
+         
+        </div>
+    <div>
+        <input type="submit" class="btn btn-info" value="Submit" (click)="send()"/>
+    </div>
+    
+</Form>
